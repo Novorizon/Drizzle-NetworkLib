@@ -1,0 +1,12 @@
+{
+  "name": "com.novorizon.network",
+  "displayName": "Drizzle NetworkLib",
+  "description": "Drizzle 网络库",
+  "version": "1.0.0",
+  "unity": "2020.1",
+  "license": "MIT",
+  "author": {
+    "name": "novorizon",
+    "email": "novorizon@hotmail.com"
+  }
+}
