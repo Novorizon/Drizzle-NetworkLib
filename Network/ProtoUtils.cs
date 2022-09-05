@@ -320,15 +320,19 @@ namespace Net
 
         private static List<Type> _protoType = new List<Type>
       {
-            typeof(C2S_Login),
-            typeof(S2C_LoginAck),
+            typeof(C2S_Login_Req),
+            typeof(S2C_Login_Ack),
+            typeof(C2S_PlayerInfo_Req),
+            typeof(S2C_PlayerInfo_Ack),
 
        };
 
         private static readonly Dictionary<RuntimeTypeHandle, MessageParser> Parsers = new Dictionary<RuntimeTypeHandle, MessageParser>()
         {
-            {typeof(C2S_Login).TypeHandle,C2S_Login.Parser },
-            {typeof(S2C_LoginAck).TypeHandle,S2C_LoginAck.Parser },
+            {typeof(C2S_Login_Req).TypeHandle,C2S_Login_Req.Parser },
+            {typeof(S2C_Login_Ack).TypeHandle,S2C_Login_Ack.Parser },
+            {typeof(C2S_PlayerInfo_Req).TypeHandle,C2S_PlayerInfo_Req.Parser },
+            {typeof(S2C_PlayerInfo_Ack).TypeHandle,S2C_PlayerInfo_Ack.Parser },
         };
 
         public static MessageParser GetMessageParser(RuntimeTypeHandle typeHandle)

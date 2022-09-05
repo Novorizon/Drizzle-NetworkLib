@@ -1,10 +1,9 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.IO;
+﻿using System.IO;
 using System.Text;
 using System;
 
-namespace Net {
+namespace Net
+{
     public class ByteBuffer {
         MemoryStream stream = null;
         BinaryWriter writer = null;
