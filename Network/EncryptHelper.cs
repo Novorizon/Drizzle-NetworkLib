@@ -1,4 +1,5 @@
 ﻿
+
 using System;
 using System.IO;
 using System.Text;
@@ -15,12 +16,14 @@ YQPJlkX6OfzJ1215htCI6Pyh2TdHRrDqVU6wP609ao9tLxRsbbXrajBGXiq2ijRX
 7AKrsVdhYi2J+B2q/CrsH5CDKa16YCVPPwf/oZDz/hxrcjZjhOoSIZupY3/xzOBT
 TjcVcvWbTxGw0wOm6wIDAQAB
 -----END PUBLIC KEY-----";
+
         private static string privateKey = "";
+
         public static void RSAKey(out string xmlKeys, out string xmlPublicKey)
         {
             try
             {
-                System.Security.Cryptography.RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+                RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
                 xmlKeys = rsa.ToXmlString(true);
                 xmlPublicKey = rsa.ToXmlString(false);
             }
@@ -29,6 +32,7 @@ TjcVcvWbTxGw0wOm6wIDAQAB
                 throw ex;
             }
         }
+
         public static RSAParameters ConvertFromPemPublicKey(string pemFileConent)
         {
             if (string.IsNullOrEmpty(pemFileConent))
@@ -166,6 +170,7 @@ TjcVcvWbTxGw0wOm6wIDAQAB
             string temp = ToHexString(allEncrypt);
             return Convert.ToBase64String(allEncrypt);
         }
+
         public static string ToHexString(byte[] bytes) // 0xae00cf => "AE00CF "
 
         {
